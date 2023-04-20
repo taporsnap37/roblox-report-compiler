@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -6,6 +7,7 @@ if TYPE_CHECKING:
 
 import tkinter as tk
 from tkinter import ttk
+
 
 class CreateReportWindow(tk.Toplevel):
     def __init__(self, parent: App) -> None:
@@ -15,8 +17,15 @@ class CreateReportWindow(tk.Toplevel):
 
         self.geometry('500x500')
         self.title('Create Report')
-    
+
         ttk.Button(self, text="Close", command=self.btn_close_callback).pack(expand=True)
+
+        ttk.Label(self, text="ID:").pack(expand=True)
+        ttk.Entry(self).pack(expand=True)
+        ttk.Label(self, text="Exploits:").pack(expand=True)
+        ttk.Entry(self).pack(expand=True)
+        ttk.Label(self, text="Clip:").pack(expand=True)
+        ttk.Entry(self).pack(expand=True)
 
         # labels:
         # ID: - The user ID (use regex to grab from the URL which will be provided)
@@ -26,5 +35,3 @@ class CreateReportWindow(tk.Toplevel):
     def btn_close_callback(self):
         self.parent.deiconify()
         self.destroy()
-
-    
