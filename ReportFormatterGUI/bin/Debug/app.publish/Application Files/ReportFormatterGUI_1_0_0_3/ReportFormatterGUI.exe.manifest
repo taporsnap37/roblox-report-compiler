@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ReportFormatterGUI.exe" version="1.0.0.3" publicKeyToken="b60177ddff9795d4" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ReportFormatterGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ReportFormatterGUI.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4eJ697B+7t9c5xqSVfBCKBam/FhJpIPGcU4bRyBE+p0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReportFormatterGUI.exe" size="22456">
+      <assemblyIdentity name="ReportFormatterGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yiKvXytnE6gxQqGhFyuP98mY/o5UXLYO/HugKn2Act0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ReportFormatterGUI.exe.config" size="188">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VDy5/VrQni+RSOb/6uEMWMc6bGQEaa2e2UdeWG+KK1I=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=MOONSHIE\rchir" issuerKeyHash="036d054272e45b2a11c310edb62d96e0f4d04655" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1tSFfwJ7jZZf0z4L4yFa3ucgF0d0Z45UfYU43vAd2IA=</DigestValue></Reference></SignedInfo><SignatureValue>IO+jU2U9oWswPSUIgDhxv/KwH3UNgFX+v8k/MCSrXv+Xvqof98y10nPgSGyO2EF80m/CJehLS/s/jE7J1SNyAI0PLGoDDNm/UPWF8zGJlamUe9kWAmPXl9MY3LXsWFDWi+EN+P9cIOBnAzfxzb3we+G9mww+lyu5d1Qvajrtstg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xCC7MFgtfx3e8l9xfz3pIJylCPdVakCSpXOq62lXx8Fy/umhDyM1WM6uRdiLE9foa8XnpOWKiyMGeUhM93v4ZDMwMgvX2K1g1QwU0H+84jegvvfCWDcrj04Z8darcqEmS4pdRwemsSu8oypFB8HoJn2p7aGC4scCzXn/l+wh3Pk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="80d81df0de38857d548e6774471720e7de5a21e30b3ed35f968d7b027f85d4d6" Description="" Url=""><as:assemblyIdentity name="ReportFormatterGUI.exe" version="1.0.0.3" publicKeyToken="b60177ddff9795d4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MOONSHIE\rchir</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>98w505BdDZAiLFfAliMSr9CHGhCW0yQ11pWC5tfZEag=</DigestValue></Reference></SignedInfo><SignatureValue>p6T1E4yR6VG4nFc3+dYe4JMZ6DG9GD2r5GPhV72atOcjM13UAyVE3e8aZMsd0xpGDHbQlq3F+Lh2euQlCPh2NS0MgPXSFe3L8qe5Y35GWAhGQdi1dFPrdrcB02lK9qarE0pjM8L+Qfa2B/NxQEoFs5JMnLTIdiQrxxd2LFxcCho=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xCC7MFgtfx3e8l9xfz3pIJylCPdVakCSpXOq62lXx8Fy/umhDyM1WM6uRdiLE9foa8XnpOWKiyMGeUhM93v4ZDMwMgvX2K1g1QwU0H+84jegvvfCWDcrj04Z8darcqEmS4pdRwemsSu8oypFB8HoJn2p7aGC4scCzXn/l+wh3Pk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQfZFIrDBF55lONUAyQHmmkTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwATQBPAE8ATgBTAEgASQBFAFwAcgBjAGgAaQByMB4XDTIzMDQyMzA5NTAwM1oXDTI0MDQyMjE1NTAwM1owJzElMCMGA1UEAx4cAE0ATwBPAE4AUwBIAEkARQBcAHIAYwBoAGkAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAxCC7MFgtfx3e8l9xfz3pIJylCPdVakCSpXOq62lXx8Fy/umhDyM1WM6uRdiLE9foa8XnpOWKiyMGeUhM93v4ZDMwMgvX2K1g1QwU0H+84jegvvfCWDcrj04Z8darcqEmS4pdRwemsSu8oypFB8HoJn2p7aGC4scCzXn/l+wh3PkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQCfV0xcU8NdUJEoSqd9gMn2jH0lUXOkSTCu8cfjugFWgEvTXVbG+h+BVDyV/Q7JSvQdUsW/XurYhExLaG0KcET+iWR9ygE+G3xoyp+PdrXOVdAwVf2RQXGB/aRwKKg4my+bdfAXzgwx7cWPCKigSPhzygko6adPbbdV4ZbOLhco6A==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
