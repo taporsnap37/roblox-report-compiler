@@ -1,0 +1,17 @@
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.vbproj.AssemblyReference.cache
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.Main.resources
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.Resources.resources
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.vbproj.GenerateResource.cache
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.vbproj.CoreCompileInputs.cache
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\ReportFormatter.exe.config
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\ReportFormatter.exe
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\ReportFormatter.pdb
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\ReportFormatter.xml
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.vbproj.CopyComplete
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.exe
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.xml
+C:\Users\rchir\OneDrive\Desktop\GitProjects\roblox-report-compiler\ReportFormatter\obj\Debug\ReportFormatter.pdb
