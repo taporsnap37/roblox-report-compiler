@@ -1,26 +1,25 @@
 ﻿Imports Newtonsoft.Json.Linq
 Imports System.Net
+Imports System.Text.RegularExpressions
 
 Public Class Main
-    Private Sub BTNFormat_Click(sender As Object, e As EventArgs) Handles BTNFormat.Click
+    Dim prevUsername As String = ""
 
-        If CheckErrors() = False Then
-            Exit Sub
+    Private Function DisplayError(errorMsg As String)
+        If errorMsg = "" Then
+            Return Nothing
         End If
+        MessageBox.Show(errorMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Return Nothing
+    End Function
 
-        Dim userID As String = GetUserID(TXT_Username.Text)
-        LBL_ID.Text = "ID: " & userID
-    End Sub
-
-    Private Function CheckErrors() As Boolean
+    Private Function CheckErrors() As String
         If TXT_Username.Text Is Nothing Or TXT_Username.Text = "" Then
-            MessageBox.Show("Pleae provide the username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
-        ElseIf TXT_Exploit.Text Is Nothing Or TXT_Exploit.Text = "" Then
-            MessageBox.Show("Pleae provide the exploit", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
+            Return "Please provide the username!"
+        ElseIf TXT_Exploit.Text Is Nothing Or TXT_Exploit.Text = "" And CheckCopyIDOnly.Checked = False Then
+            Return "Pleae provide the exploit!"
         End If
-        Return True
+        Return Nothing
     End Function
 
 
@@ -66,6 +65,18 @@ Public Class Main
         TXT_Exploit.Text = ""
         TXT_Username.Text = ""
         BoxIncludeDate.Checked = False
+        CheckCopyIDOnly.Checked = False
+    End Sub
+
+    Private Sub BTNFormat_Click(sender As Object, e As EventArgs) Handles BTNFormat.Click
+        Dim errorMsg As String = CheckErrors()
+        If errorMsg IsNot Nothing Then
+            DisplayError(errorMsg)
+            Exit Sub
+        End If
+
+        Dim userID As String = GetUserID(TXT_Username.Text)
+        LBL_ID.Text = "ID: " & userID
     End Sub
 
     Private Sub BoxIncludeDate_CheckedChanged(sender As Object, e As EventArgs) Handles BoxIncludeDate.CheckedChanged
@@ -85,6 +96,27 @@ Public Class Main
     End Sub
 
     Private Sub BTNCopy_Click(sender As Object, e As EventArgs) Handles BTNCopy.Click
+        If prevUsername <> TXT_Username.Text And prevUsername <> "" Then
+            BTNFormat.PerformClick()
+            If CheckErrors() IsNot Nothing Then
+                Exit Sub
+            End If
+            prevUsername = TXT_Username.Text
+        End If
+
+        If CheckCopyIDOnly.Checked = True Then
+            If LBL_ID.Text.Trim() = "ID:" Then
+                MessageBox.Show("Pleasse enter a valid username!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            Dim cliboardText As String = Regex.Replace(LBL_ID.Text, "[^\d]", "")
+            Clipboard.SetText(cliboardText)
+            MessageBox.Show("ID copied to clipboard!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+
         Dim textToCopy As String = LBL_ID.Text & vbNewLine & LBL_Exploit.Text
         If BoxIncludeDate.Checked = True Then
             textToCopy &= vbNewLine & LBL_Date.Text
@@ -102,5 +134,4 @@ Public Class Main
         LBL_Clip.Location = New Point(LBL_Clip.Location.X, LBL_Clip.Location.Y - 18)
         LBL_Date.Visible = False
     End Sub
-
 End Class
