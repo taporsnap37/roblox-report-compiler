@@ -2,3 +2,5 @@
 .venv/
 **/.vs/
 **/packages/
+**/Debug/
+**/Release/
