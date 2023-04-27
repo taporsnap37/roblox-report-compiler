@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "zc/s1ypjewvh+J3Az7PeHciWHCHp3Gu/DxSasTskx+aiEXQcFTLp+6h4gx+TaZ3IBFEARAqSGnitBjodL/ULRA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rchir\\OneDrive\\Desktop\\GitProjects\\roblox-report-compiler\\ReportCompilerApp\\ReportCompilerApp.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rchir\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\rchir\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\7.0.5\\microsoft.netcore.app.runtime.win-x86.7.0.5.nupkg.sha512",
+    "C:\\Users\\rchir\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\7.0.5\\microsoft.windowsdesktop.app.runtime.win-x86.7.0.5.nupkg.sha512",
+    "C:\\Users\\rchir\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\7.0.5\\microsoft.aspnetcore.app.runtime.win-x86.7.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
