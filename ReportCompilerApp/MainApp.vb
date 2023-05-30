@@ -8,6 +8,7 @@ Public Class MainApp
     Dim prevUsername As String = ""
     Dim prevID As String = ""
     Dim formatted As Boolean = False
+    Dim OffsetY As Integer = 0
 
     Private Shared Function DisplayError(message As String)
         MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -21,6 +22,7 @@ Public Class MainApp
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         CheckBoxDate.Checked = False
         CheckBoxIDOnly.Checked = False
+        CheckBoxUsername.Checked = False
         lbl_Date.Text = "Date:"
         lbl_Exploit.Text = "Exploit:"
         lbl_ID.Text = "ID:"
@@ -30,8 +32,13 @@ Public Class MainApp
     End Sub
 
     Private Sub MainApp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lbl_Clip.Location = New Point(lbl_Clip.Location.X, lbl_Clip.Location.Y - 42)
+        OffsetY = lbl_Clip.Location.Y - lbl_Date.Location.Y
+        lbl_Date.Location = New Point(lbl_Date.Location.X, lbl_Exploit.Location.Y + OffsetY)
+        lbl_Clip.Location = New Point(lbl_Date.Location.X, lbl_Date.Location.Y)
+        lbl_ID.Location = New Point(lbl_ID.Location.X, lbl_ID.Location.Y + OffsetY)
+
         lbl_Date.Visible = False
+        lbl_Username.Visible = False
     End Sub
 
     Private Sub BtnCopy_Click(sender As Object, e As EventArgs) Handles btnCopy.Click
@@ -68,7 +75,11 @@ Public Class MainApp
                 Exit Sub
             End If
 
-            Dim TextToCopy As String = lbl_ID.Text & vbCrLf & lbl_Exploit.Text
+            Dim TextToCopy As String = lbl_ID.Text
+            If CheckBoxUsername.Checked = True Then
+                TextToCopy = TextToCopy & vbCrLf & lbl_Username.Text
+            End If
+            TextToCopy = TextToCopy & vbCrLf & lbl_Exploit.Text
             If CheckBoxDate.Checked = True Then
                 TextToCopy = TextToCopy & vbCrLf & lbl_Date.Text
             End If
@@ -82,13 +93,25 @@ Public Class MainApp
     Private Sub CheckBoxDate_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxDate.CheckedChanged
         If CheckBoxDate.Checked = True Then
             lbl_Date.Visible = True
-            lbl_Clip.Location = New Point(lbl_Clip.Location.X, lbl_Clip.Location.Y + 42)
+            lbl_Clip.Location = New Point(lbl_Clip.Location.X, lbl_Clip.Location.Y + OffsetY)
             lbl_Date.Text = "Date: " & DateTime.Now.ToString("dd/MM/yyyy")
         Else
             lbl_Date.Visible = False
-            lbl_Clip.Location = New Point(lbl_Clip.Location.X, lbl_Clip.Location.Y - 42)
+            lbl_Clip.Location = New Point(lbl_Clip.Location.X, lbl_Clip.Location.Y - OffsetY)
         End If
     End Sub
+
+    Private Sub CheckBoxUsername_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxUsername.CheckedChanged
+        If CheckBoxUsername.Checked = True Then
+            lbl_Username.Visible = True
+            lbl_ID.Location = New Point(lbl_ID.Location.X, lbl_ID.Location.Y - OffsetY)
+            lbl_Username.Text = "Username: " & txtUsername.Text
+        Else
+            lbl_Username.Visible = False
+            lbl_ID.Location = New Point(lbl_ID.Location.X, lbl_ID.Location.Y + OffsetY)
+        End If
+    End Sub
+
 
     Private Sub BtnFetchID_Click(sender As Object, e As EventArgs) Handles btnFetchID.Click
         If txtUsername.Text = "" Then
@@ -108,6 +131,7 @@ Public Class MainApp
                 Exit Sub
             End If
         End If
+        lbl_Username.Text = "Username: " & prevUsername
     End Sub
 
     Private Shared Function FetchID(username As String) As String
@@ -154,6 +178,9 @@ Public Class MainApp
         Else
             formatted = True
             lbl_ID.Text = "ID: " & prevID
+            lbl_Username.Text = "Username: " & prevUsername
         End If
     End Sub
+
+
 End Class

@@ -28,6 +28,7 @@ Partial Class MainApp
         txtUsername = New TextBox()
         txtExploit = New TextBox()
         GroupBox1 = New GroupBox()
+        lbl_Username = New Label()
         lbl_Clip = New Label()
         lbl_Date = New Label()
         lbl_Exploit = New Label()
@@ -37,6 +38,7 @@ Partial Class MainApp
         CheckBoxDate = New CheckBox()
         CheckBoxIDOnly = New CheckBox()
         Label3 = New Label()
+        CheckBoxUsername = New CheckBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -83,21 +85,31 @@ Partial Class MainApp
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(lbl_Username)
         GroupBox1.Controls.Add(lbl_Clip)
         GroupBox1.Controls.Add(lbl_Date)
         GroupBox1.Controls.Add(lbl_Exploit)
         GroupBox1.Controls.Add(lbl_ID)
-        GroupBox1.Location = New Point(130, 386)
+        GroupBox1.Location = New Point(130, 409)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(480, 253)
         GroupBox1.TabIndex = 5
         GroupBox1.TabStop = False
         GroupBox1.Text = "Formatted Report"
         ' 
+        ' lbl_Username
+        ' 
+        lbl_Username.AutoSize = True
+        lbl_Username.Location = New Point(21, 79)
+        lbl_Username.Name = "lbl_Username"
+        lbl_Username.Size = New Size(126, 32)
+        lbl_Username.TabIndex = 4
+        lbl_Username.Text = "Username:"
+        ' 
         ' lbl_Clip
         ' 
         lbl_Clip.AutoSize = True
-        lbl_Clip.Location = New Point(21, 200)
+        lbl_Clip.Location = New Point(21, 205)
         lbl_Clip.Name = "lbl_Clip"
         lbl_Clip.Size = New Size(231, 32)
         lbl_Clip.TabIndex = 3
@@ -106,7 +118,7 @@ Partial Class MainApp
         ' lbl_Date
         ' 
         lbl_Date.AutoSize = True
-        lbl_Date.Location = New Point(21, 158)
+        lbl_Date.Location = New Point(21, 163)
         lbl_Date.Name = "lbl_Date"
         lbl_Date.Size = New Size(69, 32)
         lbl_Date.TabIndex = 2
@@ -115,7 +127,7 @@ Partial Class MainApp
         ' lbl_Exploit
         ' 
         lbl_Exploit.AutoSize = True
-        lbl_Exploit.Location = New Point(21, 116)
+        lbl_Exploit.Location = New Point(21, 121)
         lbl_Exploit.Name = "lbl_Exploit"
         lbl_Exploit.Size = New Size(90, 32)
         lbl_Exploit.TabIndex = 1
@@ -124,7 +136,7 @@ Partial Class MainApp
         ' lbl_ID
         ' 
         lbl_ID.AutoSize = True
-        lbl_ID.Location = New Point(21, 74)
+        lbl_ID.Location = New Point(21, 37)
         lbl_ID.Name = "lbl_ID"
         lbl_ID.Size = New Size(42, 32)
         lbl_ID.TabIndex = 0
@@ -151,7 +163,7 @@ Partial Class MainApp
         ' CheckBoxDate
         ' 
         CheckBoxDate.AutoSize = True
-        CheckBoxDate.Location = New Point(137, 278)
+        CheckBoxDate.Location = New Point(137, 270)
         CheckBoxDate.Name = "CheckBoxDate"
         CheckBoxDate.Size = New Size(181, 36)
         CheckBoxDate.TabIndex = 8
@@ -161,7 +173,7 @@ Partial Class MainApp
         ' CheckBoxIDOnly
         ' 
         CheckBoxIDOnly.AutoSize = True
-        CheckBoxIDOnly.Location = New Point(137, 320)
+        CheckBoxIDOnly.Location = New Point(137, 354)
         CheckBoxIDOnly.Name = "CheckBoxIDOnly"
         CheckBoxIDOnly.Size = New Size(188, 36)
         CheckBoxIDOnly.TabIndex = 9
@@ -178,11 +190,22 @@ Partial Class MainApp
         Label3.TabIndex = 10
         Label3.Text = "Report Formatter"
         ' 
+        ' CheckBoxUsername
+        ' 
+        CheckBoxUsername.AutoSize = True
+        CheckBoxUsername.Location = New Point(137, 312)
+        CheckBoxUsername.Name = "CheckBoxUsername"
+        CheckBoxUsername.Size = New Size(238, 36)
+        CheckBoxUsername.TabIndex = 11
+        CheckBoxUsername.Text = "Include Username"
+        CheckBoxUsername.UseVisualStyleBackColor = True
+        ' 
         ' MainApp
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(787, 840)
+        Controls.Add(CheckBoxUsername)
         Controls.Add(Label3)
         Controls.Add(CheckBoxIDOnly)
         Controls.Add(CheckBoxDate)
@@ -217,4 +240,6 @@ Partial Class MainApp
     Friend WithEvents CheckBoxDate As CheckBox
     Friend WithEvents CheckBoxIDOnly As CheckBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents lbl_Username As Label
+    Friend WithEvents CheckBoxUsername As CheckBox
 End Class
